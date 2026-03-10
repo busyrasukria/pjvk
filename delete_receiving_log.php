@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 $id = $_POST['id'] ?? null;
 $supplier = $_POST['supplier'] ?? null;
 $password = $_POST['password'] ?? null;
-$admin_password = "Admin404"; // Ensure this matches your system's admin password
+$admin_password = ""; // Ensure this matches your system's admin password
 
 if (!$id || !$supplier || !$password) {
     echo json_encode(['success' => false, 'message' => 'Missing required fields']);
@@ -46,4 +46,5 @@ try {
 } catch (Exception $e) {
     echo json_encode(['success' => false, 'message' => 'Database error: ' . $e->getMessage()]);
 }
+
 ?>
