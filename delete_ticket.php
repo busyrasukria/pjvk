@@ -2,7 +2,7 @@
 require_once 'db.php';
 header('Content-Type: application/json');
 
-$admin_password = "Admin404"; 
+$admin_password = ""; 
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     echo json_encode(['success' => false, 'message' => 'Invalid request method.']);
@@ -79,4 +79,5 @@ try {
     error_log("Error deleting ticket: " . $e->getMessage());
     echo json_encode(['success' => false, 'message' => 'Database error: ' . $e->getMessage()]);
 }
+
 ?>
