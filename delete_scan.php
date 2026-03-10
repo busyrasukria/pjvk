@@ -3,7 +3,7 @@ require_once 'db.php';
 header('Content-Type: application/json');
 
 // --- SET YOUR DELETE PASSWORD HERE ---
-$admin_password = "Admin404"; // Update this to your actual password
+$admin_password = ""; // Update this to your actual password
 // -------------------------------------
 
 // 1. Check if the request is valid
@@ -51,4 +51,5 @@ try {
     error_log("Error deleting scan log: " . $e->getMessage());
     echo json_encode(['success' => false, 'message' => 'A database error occurred.']);
 }
+
 ?>
