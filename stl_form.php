@@ -68,8 +68,8 @@ $current_date = date('d M Y');
 
 // --- TELEGRAM HELPER FUNCTION ---
 function sendTelegramMessage($chat_id, $message) {
-    $botToken = "8733060131:AAF61QtiBJLI1T8_aCZ5adZnRanRUKKq3x8"; 
-    $website = "https://api.telegram.org/bot" . $botToken; 
+    $botToken = ""; 
+    $website = "" . $botToken; 
     
     $params = [
         'chat_id' => $chat_id, 
@@ -207,11 +207,11 @@ function sendEmailWithExcel($to_emails, $subject, $body, $filename, $html_conten
     try {
         $mail->SMTPDebug  = 0; 
         $mail->isSMTP();
-        $mail->Host       = 'smtp.resend.com'; 
+        $mail->Host       = ''; 
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'resend'; 
-        $mail->Password   = 're_7cV7Be87_6Vt1y2iuEaKS6b7cB1Lw3YBW'; 
-        $mail->SMTPSecure = 'tls'; 
+        $mail->Username   = ''; 
+        $mail->Password   = ''; 
+        $mail->SMTPSecure = ''; 
         $mail->Port       = 587; 
 
         $mail->setFrom('stl@warehousepjvk.xyz', 'PEPS-JV STL');
@@ -553,7 +553,7 @@ if ($action == 'create_request') {
         $excel_data = buildExcelDocument($pdo, $_POST['order_id']);
         
         $filename = "STL_Record_Trip_" . $actual_trip . "_" . date('Ymd') . ".xls";
-        $hod_emails = "busyrasukria@gmail.com,busyra121102@gmail.com"; 
+        $hod_emails = ""; 
         $subject = "COMPLETED STL: $model Line $line (Trip " . $actual_trip . ")";
         
         $body_text = "Dear HOD,\n\n";
@@ -1653,4 +1653,5 @@ $theme = match($role) {
         function autoFillQty(type) { if(type === 'req') document.querySelectorAll('.qty-input-req').forEach(el => el.value = el.getAttribute('data-std-trip')); else if (type === 'sup') document.querySelectorAll('.qty-input-sup').forEach(el => el.value = el.getAttribute('data-req-qty')); else if (type === 'rec') document.querySelectorAll('.qty-input-rec').forEach(el => el.value = el.getAttribute('data-sup-qty')); }
     </script>
 </body>
+
 </html>
