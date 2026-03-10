@@ -208,11 +208,11 @@ function sendEmailWithExcel($to_emails, $subject, $body, $filename, $html_conten
         $mail->SMTPDebug  = 0; 
         $mail->isSMTP();
         $mail->Host       = ''; 
-        $mail->SMTPAuth   = true;
+        $mail->SMTPAuth   = ;
         $mail->Username   = ''; 
         $mail->Password   = ''; 
         $mail->SMTPSecure = ''; 
-        $mail->Port       = 587; 
+        $mail->Port       = ; 
 
         $mail->setFrom('stl@warehousepjvk.xyz', 'PEPS-JV STL');
         
@@ -1655,3 +1655,4 @@ $theme = match($role) {
 </body>
 
 </html>
+
