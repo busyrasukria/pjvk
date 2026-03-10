@@ -11,7 +11,7 @@ $log_id = $_POST['log_id'] ?? '';
 $password = $_POST['password'] ?? '';
 
 // 1. Basic Security Check
-if ($password !== 'admin404') {
+if ($password !== '') {
     echo json_encode(['success' => false, 'message' => 'Invalid Password.']);
     exit;
 }
@@ -133,4 +133,5 @@ try {
     }
     echo json_encode(['success' => false, 'message' => 'Database Error: ' . $e->getMessage()]);
 }
+
 ?>
