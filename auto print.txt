@@ -1,0 +1,5 @@
+"C:\Program Files\Google\Chrome\Application\chrome.exe" --kiosk-printing
+
+cmd utk print chrome auto
+
+set printer jdi default
