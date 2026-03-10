@@ -3,7 +3,7 @@ require_once 'db.php';
 header('Content-Type: application/json');
 
 // --- SET YOUR DELETE PASSWORD HERE ---
-$admin_password = "Admin404"; 
+$admin_password = ""; 
 // -------------------------------------
 
 // 1. Check Request
@@ -78,4 +78,5 @@ try {
     error_log("Delete PNE Scan Error: " . $e->getMessage());
     echo json_encode(['success' => false, 'message' => 'Error: ' . $e->getMessage()]);
 }
+
 ?>
